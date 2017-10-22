@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Crisp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ph0-EG-qnj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="633"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy9-1K-M4e">
+                                        <rect key="frame" x="285" y="603" width="90" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="90" id="xwg-yK-Tgr"/>
+                                        </constraints>
+                                        <state key="normal" title="TestButton"/>
+                                        <connections>
+                                            <action selector="toListOfFood:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wyh-Rf-5j8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jy9-1K-M4e" secondAttribute="trailing" id="QA3-1T-f62"/>
+                                    <constraint firstAttribute="bottom" secondItem="jy9-1K-M4e" secondAttribute="bottom" id="Qg5-4S-YNJ"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-i2-3Ld">
+                                <rect key="frame" x="0.0" y="633" width="375" height="34"/>
+                                <color key="backgroundColor" red="0.62931690289999997" green="0.94648569419999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Capture">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iso-SG-Hgl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2aR-i2-3Ld" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8eD-i0-CXO"/>
+                            <constraint firstItem="2aR-i2-3Ld" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F5Z-00-aq3"/>
+                            <constraint firstItem="Ph0-EG-qnj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="O3q-bB-SGe"/>
+                            <constraint firstItem="Ph0-EG-qnj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Wmw-7r-j76"/>
+                            <constraint firstItem="2aR-i2-3Ld" firstAttribute="top" secondItem="Ph0-EG-qnj" secondAttribute="bottom" id="n6B-We-Qt4"/>
+                            <constraint firstItem="2aR-i2-3Ld" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="neH-9g-V9t"/>
+                            <constraint firstItem="Ph0-EG-qnj" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="svT-rw-r8i"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Ph0-EG-qnj" id="hTt-KM-azA"/>
+                        <outlet property="captureButtonOutlet" destination="2aR-i2-3Ld" id="bwL-fH-mzK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+    </scenes>
+</document>

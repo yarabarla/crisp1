@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food List Table View Controller-->
+        <scene sceneID="vUS-te-Gl5">
+            <objects>
+                <tableViewController id="OSA-Gs-HSJ" customClass="FoodListTableViewController" customModule="Crisp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9JH-4g-9av">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="YRh-bg-rUf" customClass="FoodTableViewCell" customModule="Crisp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YRh-bg-rUf" id="pTZ-Sm-yH3">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYp-bV-bCT">
+                                            <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="hYp-bV-bCT" secondAttribute="height" multiplier="2:1" id="udJ-sH-Q2Z"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.40876871510000001" green="0.66998054019999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OyN-f5-r79">
+                                            <rect key="frame" x="318.5" y="10" width="48.5" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="OyN-f5-r79" secondAttribute="height" multiplier="2:1" id="Lvq-nr-yTb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hYp-bV-bCT" firstAttribute="leading" secondItem="pTZ-Sm-yH3" secondAttribute="leadingMargin" id="3eb-hU-7xZ"/>
+                                        <constraint firstItem="OyN-f5-r79" firstAttribute="centerY" secondItem="pTZ-Sm-yH3" secondAttribute="centerY" id="Ibf-ft-yOR"/>
+                                        <constraint firstItem="hYp-bV-bCT" firstAttribute="centerY" secondItem="pTZ-Sm-yH3" secondAttribute="centerY" id="Vkc-s2-nfj"/>
+                                        <constraint firstItem="OyN-f5-r79" firstAttribute="trailing" secondItem="pTZ-Sm-yH3" secondAttribute="trailingMargin" id="yQv-Ro-cfm"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="daysLeftLabel" destination="OyN-f5-r79" id="cwK-ve-LjZ"/>
+                                    <outlet property="foodNameLabel" destination="hYp-bV-bCT" id="4P7-Uo-f3T"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OSA-Gs-HSJ" id="X8T-Yw-Y9u"/>
+                            <outlet property="delegate" destination="OSA-Gs-HSJ" id="Et4-bE-k6Z"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="26T-sG-ngj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="62"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="nR3-ft-qg2">
+            <objects>
+                <viewController id="fRO-6g-Pqt" customClass="CameraViewController" customModule="Crisp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oF0-Sd-qHt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PQe-8n-v0R">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PQe-8n-v0R" firstAttribute="centerY" secondItem="oF0-Sd-qHt" secondAttribute="centerY" id="Ehb-AO-gv7"/>
+                            <constraint firstItem="PQe-8n-v0R" firstAttribute="height" secondItem="oF0-Sd-qHt" secondAttribute="height" id="Epf-Z5-Dbe"/>
+                            <constraint firstItem="PQe-8n-v0R" firstAttribute="width" secondItem="oF0-Sd-qHt" secondAttribute="width" id="IFJ-RO-jI2"/>
+                            <constraint firstItem="PQe-8n-v0R" firstAttribute="centerX" secondItem="oF0-Sd-qHt" secondAttribute="centerX" id="gtM-8M-DBj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Vw-fJ-YZ9"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="PQe-8n-v0R" id="qdf-FQ-3Ad"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BhL-PH-Lnt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2612" y="802"/>
+        </scene>
+    </scenes>
+</document>

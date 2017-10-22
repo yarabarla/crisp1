@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewViewController" customModule="Crisp" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="mNH-IG-u1n" id="3hj-KH-9QC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mNH-IG-u1n">
+                    <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.67910130049999995" green="1" blue="0.66023905039999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="i5M-Pr-FkT" id="BQe-Yz-jqh"/>
+                        <outlet property="delegate" destination="i5M-Pr-FkT" id="dNw-eN-RLb"/>
+                    </connections>
+                </tableView>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" translatesAutoresizingMaskIntoConstraints="NO" id="e15-7K-Rqp" customClass="FoodTableViewCell" customModule="Crisp" customModuleProvider="target">
+                    <rect key="frame" x="10" y="10" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e15-7K-Rqp" id="2dj-ac-Oe0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUc-dR-9uR">
+                                <rect key="frame" x="8" y="11" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YUc-dR-9uR" secondAttribute="height" multiplier="2:1" id="TQ8-ho-ICN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40876871510000001" green="0.66998054019999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#Days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWG-jP-BdP">
+                                <rect key="frame" x="318.5" y="10" width="48.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pWG-jP-BdP" secondAttribute="height" multiplier="2:1" id="3Bo-jB-o4n"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YUc-dR-9uR" firstAttribute="centerY" secondItem="2dj-ac-Oe0" secondAttribute="centerY" id="ATa-du-iky"/>
+                            <constraint firstItem="YUc-dR-9uR" firstAttribute="leading" secondItem="2dj-ac-Oe0" secondAttribute="leadingMargin" id="Nxm-nZ-57c"/>
+                            <constraint firstItem="pWG-jP-BdP" firstAttribute="centerY" secondItem="2dj-ac-Oe0" secondAttribute="centerY" id="hWO-x6-6bR"/>
+                            <constraint firstItem="pWG-jP-BdP" firstAttribute="trailing" secondItem="2dj-ac-Oe0" secondAttribute="trailingMargin" id="wc7-OJ-F1q"/>
+                        </constraints>
+                    </tableViewCellContentView>
+                    <connections>
+                        <outlet property="daysLeftLabel" destination="pWG-jP-BdP" id="IAb-iW-D6L"/>
+                        <outlet property="foodNameLabel" destination="YUc-dR-9uR" id="Cym-wo-gb7"/>
+                    </connections>
+                </tableViewCell>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mNH-IG-u1n" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="171-dG-z3q"/>
+                <constraint firstItem="mNH-IG-u1n" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="MUj-d8-PdM"/>
+                <constraint firstItem="mNH-IG-u1n" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="WpO-DP-Pjt"/>
+                <constraint firstItem="mNH-IG-u1n" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="by6-wS-gCx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
