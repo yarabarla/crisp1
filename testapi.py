@@ -43,19 +43,32 @@ try:
     # 'data' contains the JSON data. The following formats the JSON data for display.
     parsed = json.loads(str_response)
 
-    Ourdb = {"Milk": 7, "Eggs": 20, "Packaged Meats" : 8, "Bologna":12, "Bagel":6, "Bread":6, "Raspberries":2, 
-    "Banana":6, "Tomato":6, "Peach":4, "Potato":24, "Avocado":4, "Green Bean":7, "Kale":6, "Broccoli":4, 
-    "Mushroom":2, "Asparagus":6, "Hummus":6, "Yogurt":10}
+    texts = []
+
+    regions = parsed["regions"]
+    for region in regions:
+        lines = region["lines"]
+        for line in lines:
+            words = line["words"]
+            for word in words:
+                text = word["text"]
+                texts.append(text)
+
+
+    Ourdb = {"MILK": 7, "EGGS": 20, "PACKAGED MEATS" : 8, "BOLOGNA":12, "BAGEL":6, "BREAD":6, "RASPBERRIES":2, 
+    "BANANA":6, "TOMATO":6, "PEACH":4, "POTATO":24, "AVOCADO":4, "GREEN BEAN":7, "KALE":6, "BROCCOLI":4, 
+    "MUSHROOM":2, "ASPARAGUS":6, "HUMMUS":6, "YOGURT":10}
 
     new = {}
-    for key in parsed:
-        for key2 in Ourdb:
-            if key == key2:
-                new[key2] = Ourdb[key2]
+    for val in texts:
+        for key in Ourdb:
+            if val == key:
+                new[val] = Ourdb[key]
 
     # print(str_response)
-
-    print(parsed["regions"][0]['lines'][0]['words'][0]['text'])
+    # print(texts)
+    print(new)
+    # print(parsed["regions"][0]['lines'][0]['words'][0]['text'])
     # print ("Response:")
     # print (json.dumps(parsed, sort_keys=True, indent=2))
 
